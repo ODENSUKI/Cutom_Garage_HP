@@ -17,7 +17,7 @@ document.addEventListener("scroll", function() {
 
 
 // Homeの画像を1秒ずつ切り替える
-const img = ["img/yoito15-2.png", "img/yoito23-2.png", "img/yoito1-2.png"];
+const img = ["motomachi_img/renovecar.jpg", "motomachi_img/IMG_20220406_144726.jpg", "motomachi_img/IMG_20220406_144530.jpg"];
 
 let count = -1;
 
