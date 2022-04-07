@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+body {
+  font-family: serif;
+  background-color: white;
+  color: black;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+header {
+  padding: 50px;
+}
+
+@keyframes titleAnimation {
+  0% {
+    letter-spacing: .3em;
+    opacity: 0;
+  }
+}
+
+header h1 {
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  white-space: nowrap;
+  animation: titleAnimation 2s;
+}
+
+header h2 {
+  font-size: 20px;
+  padding-bottom: 40px;
+}
+
+header {
+  position: relative;
+  text-align: center;
+}
+
+header:before {
+  content: "";
+  position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 0;
+	border-bottom: solid 1.5px #000;
+	transform: translateX(-50%);
+	animation: hederAnimation 2.5s linear forwards;
+}
+
+@keyframes hederAnimation {
+  0%{
+		width: 0%;
+	}
+	100%{
+		width: 100%;
+	}
+}
+
+main {
+  max-width: 1000px;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.contents li{
+  position: relative;
+}
+
+
+.contents li.show h2,
+main .contents li.show img {
+  transform: none;
+  opacity: 1;
+}
+
+.contents li.show p{
+  transform: none;
+  opacity: 0.9;
+}
+
+
+.contents li:not(:first-of-type) {
+  margin-top: 200px;
+}
+
+.contents li:nth-of-type(odd) .contentsText {
+  right: 0;
+}
+
+.contents li:nth-of-type(even) .contentsText {
+  align-items: flex-start;
+}
+
+.contents li:nth-of-type(odd) img {
+  margin-right: auto;
+  transform: translate(-20px, 20px);
+}
+
+.contents li:nth-of-type(even) img {
+  margin-left: auto;
+  transform: translate(20px, 20px);
+}
+
+.contentsText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 40px;
+}
+
+.contents h2 {
+  font-size: 35px;
+  font-weight: bold;
+  white-space: nowrap;
+  /* background-color: rgba(20, 20, 20, .8); */
+  /* background-color: rgba(62, 59, 59, 0.8); */
+  padding: 10px 20px;
+  line-height: 1.4;
+  letter-spacing: .05em;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1.5s;
+}
+
+.contents p {
+  line-height: 1.6;
+  /* background-color: white; */
+  background-color: rgba(233, 227, 227, 0.1); 
+  font-size: 20px;
+  max-width: 400px;
+  padding: 15px;
+  margin-top: 30px;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1.5s;
+}
+
+.contents img {
+  width: 50%;
+  display: block;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: 1.5s .5s;
+}
+
+.headerTag li{
+  font-size: 17px;
+  float: left;
+  /* padding: 0 25px; */
+  margin: 0 25px;
+}
+
+.headerTag {
+  display:flex;
+  text-align: center;
+  justify-content:center; 
+}
+
+.eachTextAnime span{opacity: 0;}
+.eachTextAnime.appeartext span{ animation:text_anime_on 1s ease-out forwards; }
+@keyframes text_anime_on {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+
+footer {
+  /* border-top: solid 1.5px; */
+  /* position: relative; */
+  /* text-align: center; */
+  background-color: rgba(202, 209, 199, 0.164);
+  padding: 10px;
+  height: 110px;
+}
+
+.headerTag li:hover {
+  /* background-color: gray; */
+  opacity: 0.3;
+}
+
+.scroll {
+  text-align: center;
+  padding-bottom: 70px;
+  color: gray;
+  font-size: 20px;
+}
+
+
+.footer-logo {
+    /* padding-bottom: 70px; */
+  text-align: left;
+  /* position: absolute; */
+  padding: 20px;
+  font-size: 25px;
+  color: rgba(49, 34, 7, 0.755);
+  font-family: YuGothic, "ヒラギノ角ゴ ProN W3", "Lucida Grande", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+  /* font-weight: bold; */
+}
+
+.footer-list {
+  text-align: right;
+}
+
+
+.modal-wrapper.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+
+.imgZoom {
+  font-size: 10px;
+  text-align: right;
+}
+
+.help-container {
+  padding: 10px;
+}
+
+.help-title {
+  /* background-color: blue; */
+  font-size: 35px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+
+.help-item li {
+  padding: 10px 10px 10px 20px;
+  /* background-color: blueviolet; */
+}
+
+.help-item a:hover {
+  opacity: 0.3;
+}
+
+.help-map {
+  padding: 30px;
+}
+
+
+.contentsText a:hover {
+  opacity: 0.3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
