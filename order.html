@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toyota Custom Garage</title>
+    <link rel="icon" href="motomachi_img/enblem.png" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dist/css/lightbox.min.css" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+    <script src="dist/js/lightbox-plus-jquery.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Toyota Custom Garage</h1>
+      <h2>あなたのクルマを、思いのままに。</h2>
+      <div class="headerTag">
+        <ul>
+          <li id="tag1"><a href="index.html">Home</a></li>
+          <li id="tag2"><a href="product.html">Product</a></li>
+          <li id="tag2"><a href="order.html">Order</a></li>
+          <li id="tag3"><a href="access.html">Access</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <div class="order function">
+        <p class="order page">2.5Dプリンターへの発注ができます。</p>
+        <p class="order page">画像をアップロードしてください。</p>
+      </div>
+      <form>
+        <input type="file" accept="image/*" onchange="previewImage(this);" />
+      </form>
+      <p>
+        Preview:<br />
+        <img
+          id="preview"
+          src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+          style="max-width: 400px"
+        />
+      </p>
+      <script src="filereader.js" defer></script>
+    </main>
+
+    <footer>
+      <div class="footer-logo">2GS モビリティ製造技術室</div>
+      <ul>
+        <li class="footer-list">
+          Copyright © 2022 Satoshi Kitai All Right Reserved.
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
